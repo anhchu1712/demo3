@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> HỒ CÁ VUI NHỘN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="hoca.css">
+  
+</head>
+<body style="color: aqua;">
+  <div id="aquarium">
+    <img src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/shark.png" class="fish" style="top: 100px; left: 200px; width: 100px; height: 100px;">
+    <img src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/diver1.png" class="tho" style="top: 200px; left: 400px;width: 100px; height: 100px;">
+    <img src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/turtle.png" class="rua" style="top: 300px; left: 400px;width: 100px; height: 100px;">
+    <img src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/faintSchool.png" class="bb" style="top: 200px; left: 100px;width: 100px; height: 100px;">
+    <img src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/faintSchool.png" class="bb1" style="top: 200px; left: 0px;width: 100px; height: 100px;">
+    <img src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/faintSchool.png" class="bb1" style="top: 200px; left: 200px;width: 100px; height: 100px;">
+    <img src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/faintSchool.png" class="bb1" style="top: 200px; left: 300px;width: 100px; height: 100px;">
+    <img src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/faintSchool.png" class="bb1" style="top: 200px; left: 400px;width: 100px; height: 100px;">
+    
+  </div >
+  <div class="box";>
+  <button  onclick="changeBackground1()">Thay đổi nền 1</button>
+  <button  onclick="changeBackground2()">Thay đổi nền 2</button>
+
+  <audio id="myaudio" src="https://tunguyensinh5325.github.io/2311COMP180205-TKWEB-49.01.104.168-6.1.1/nhac.mp3" type="audio/mp3" loop></audio>
+  <button id="nhac" onclick="nhac()">Bật/Tắt Nhạc</button>
+  </div>
+
+
+  
+  <script>
+    var audio = document.getElementById("myaudio");
+
+    function nhac() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+    var nen = false;
+
+  function changeBackground1() {
+    var aquarium = document.getElementById("aquarium");
+
+    if (nen) {
+      aquarium.style.background = "";
+    } else {
+      aquarium.style.background = " url('https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-blue-ocean-and-seaweed-illustration-background-illustration-oceanocean-backgroundhand-paintedillustration-image_59758.jpg') center/cover fixed";
+    }
+
+    nen = !nen;
+  }
+
+  function changeBackground2() {
+    var aquarium = document.getElementById("aquarium");
+
+    if (nen) {
+      aquarium.style.background = "";
+    } else {
+      aquarium.style.background = "url('https://png.pngtree.com/thumb_back/fw800/background/20230408/pngtree-ocean-underwater-world-background-image_2177136.jpg') center/cover fixed";
+    }
+
+    nen = !nen;
+  }
+
+  </script>
+</body>
+</html>
